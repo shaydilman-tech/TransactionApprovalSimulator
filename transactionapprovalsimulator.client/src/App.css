@@ -1,0 +1,211 @@
+﻿/* ROOT */
+#root {
+    width: 100%;
+    padding: 2rem 4rem;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.app-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.app-logo {
+    height: 80px;
+    transform: none;
+}
+
+.main-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 2rem;
+    max-width: 1100px; /* NEW */
+    margin-left: auto; /* NEW */
+    margin-right: auto; /* NEW */
+}
+
+/* LEFT COLUMN */
+.controls {
+    flex: 0 0 320px; /* fixed width like your reference */
+}
+
+/* LABEL */
+.control-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* SELECT */
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    display: block;
+    width: 220px;
+}
+
+/* TIME PICKER */
+.time-picker {
+    background: #efe7f7;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.time-box {
+    width: 70px;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #cfc0df;
+    background: #fff;
+}
+
+.time-box.hour {
+    background: #e5d7f7;
+}
+
+.time-box.minute {
+    background: #f4f0f8;
+}
+
+.time-sep {
+    font-size: 1.2rem;
+    padding: 0 0.3rem;
+}
+
+.time-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.time-actions button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.time-actions button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* RIGHT COLUMN IMAGE */
+.content-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+}
+
+/* APPROVED TRANSACTIONS SECTION */
+.cards-section {
+    width: 100%;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    background: #faf7ff; /* subtle lavender like your reference */
+    border-radius: 12px;
+}
+
+.approved-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+/* CARDS LAYOUT */
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.cards {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+.card {
+    flex: 1;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 0;
+}
+
+.card .time {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.card .zone {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ARROWS */
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0 10px;
+}
+
+.arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .controls {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .content {
+        max-width: 900px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}

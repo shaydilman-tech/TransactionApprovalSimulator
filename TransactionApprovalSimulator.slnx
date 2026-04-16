@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="transactionapprovalsimulator.client/transactionapprovalsimulator.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="TransactionApprovalSimulator.Server/TransactionApprovalSimulator.Server.csproj" />
+</Solution>
