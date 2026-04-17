@@ -1,13 +1,12 @@
-const API_BASE = "http://localhost:5000/api";
-
 export async function postTransaction(payload) {
-    const res = await fetch(`${API_BASE}/transactions`, {
+    const res = await fetch('transactions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
     });
 
     if (!res.ok) {
+        // try to parse server error
         let body;
         try { body = await res.json(); } catch { body = await res.text(); }
         const message = body?.error || body?.message || String(body);
@@ -18,7 +17,7 @@ export async function postTransaction(payload) {
 }
 
 export async function getApprovedTransactions() {
-    const res = await fetch(`${API_BASE}/transactions/approved`);
+    const res = await fetch('transactions/approved');
     if (!res.ok) throw new Error('Failed to fetch approved transactions');
     return await res.json();
 }
